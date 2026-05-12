@@ -1,0 +1,80 @@
+! MeshSight Sentinel - site router example
+! Replace every placeholder before use.
+
+service password-encryption
+hostname SiteRouter
+no ip domain-lookup
+ip domain-name meshsight.local
+ip cef
+no ipv6 cef
+
+enable secret <ENABLE_SECRET>
+username admin privilege 15 secret <ADMIN_SECRET>
+
+ip ssh version 2
+ip ssh authentication-retries 2
+ip ssh time-out 60
+
+crypto isakmp policy 10
+ encr aes 256
+ authentication pre-share
+ group 5
+
+crypto isakmp key <PRE_SHARED_KEY> address 192.168.4.2
+
+crypto ipsec transform-set VPN-SET esp-aes esp-sha-hmac
+
+crypto map VPN-SET 10 ipsec-isakmp
+ description VPN_CONNECTS_TO_PARTNER
+ set peer 192.168.4.2
+ set transform-set VPN-SET
+ match address 130
+
+interface GigabitEthernet0/0
+ description CAMERA_OR_EDGE_SEGMENT
+ ip address 192.168.1.1 255.255.255.0
+ ip access-group 100 in
+ duplex auto
+ speed auto
+
+interface GigabitEthernet0/1
+ description MESH_OR_MANAGEMENT_SEGMENT
+ ip address 192.168.2.1 255.255.255.0
+ ip access-group 100 in
+ duplex auto
+ speed auto
+
+interface GigabitEthernet0/2
+ description PARTNER_VPN_UPLINK
+ ip address 192.168.3.1 255.255.255.0
+ ip access-group 100 in
+ duplex auto
+ speed auto
+ crypto map VPN-SET
+
+interface Vlan1
+ no ip address
+ shutdown
+
+router rip
+ version 2
+ network 192.168.1.0
+ network 192.168.2.0
+ network 192.168.3.0
+
+ip classless
+ip flow-export version 9
+
+access-list 100 deny icmp 192.168.2.0 0.0.0.255 any echo
+access-list 100 permit ip 192.168.1.0 0.0.0.255 192.168.2.0 0.0.0.255
+access-list 100 permit ip 192.168.3.0 0.0.0.255 192.168.2.0 0.0.0.255
+access-list 100 permit ip any any
+access-list 130 permit ip 192.168.3.0 0.0.0.255 192.168.4.0 0.0.0.255
+
+line con 0
+ logging synchronous
+ login local
+
+line vty 0 15
+ login local
+ transport input ssh

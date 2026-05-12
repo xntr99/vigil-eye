@@ -1,0 +1,7 @@
+_extracted/
+_private/
+assets/raw/
+assets/images/
+assets/figures/
+*.tmp
+*.log

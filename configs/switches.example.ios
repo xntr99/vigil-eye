@@ -1,0 +1,46 @@
+! MeshSight Sentinel - switch examples
+
+! Site switch
+hostname SiteSwitch
+spanning-tree mode pvst
+spanning-tree extend system-id
+
+interface GigabitEthernet0/1
+ description ROUTER_TRUNK
+ switchport mode trunk
+
+interface GigabitEthernet0/2
+ description MESH_OR_NVR_TRUNK
+ switchport mode trunk
+
+interface Vlan1
+ no ip address
+ shutdown
+
+line con 0
+ login
+
+line vty 0 15
+ login
+
+! Partner switch
+hostname PartnerSwitch
+spanning-tree mode pvst
+spanning-tree extend system-id
+
+interface GigabitEthernet0/1
+ description ROUTER_TRUNK
+ switchport mode trunk
+
+interface GigabitEthernet0/2
+ description RESERVED_UPLINK
+
+interface Vlan1
+ no ip address
+ shutdown
+
+line con 0
+ login
+
+line vty 0 15
+ login
