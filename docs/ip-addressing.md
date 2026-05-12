@@ -1,6 +1,8 @@
 # IP Addressing
 
-The original addressing scheme was provided as a visual table. This page transcribes it into Markdown and adds production notes where the simulation should be cleaned up before deployment. The original image was removed from the public asset set because visual screenshots can contain identifying context.
+The original addressing scheme was provided as a visual table. This page transcribes it into Markdown and adds production notes where the simulation should be cleaned up before deployment.
+
+![IP addressing scheme](../assets/source-figures/ip-addressing-scheme-p101-01.png)
 
 ## Source Address Plan
 

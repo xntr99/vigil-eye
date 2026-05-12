@@ -4,6 +4,20 @@ This bill of materials captures the device choices from the design and converts 
 
 ## Device Inventory
 
+![Gateway router](../assets/source-figures/device-dream-router-p119-01.png)
+
+![Main wireless bridge](../assets/source-figures/device-nanostation-bridge-p123-01.png)
+
+![Bridge station](../assets/source-figures/device-powerbeam-bridge-p128-01.png)
+
+![Network video recorder](../assets/source-figures/device-nvr-p132-01.png)
+
+![Mesh node](../assets/source-figures/device-mesh-node-p137-01.png)
+
+![Bullet IP camera](../assets/source-figures/device-bullet-camera-p142-01.png)
+
+![Dome IP camera](../assets/source-figures/device-dome-camera-p149-01.png)
+
 | Qty | Device | Role | Key Capabilities |
 | --- | --- | --- | --- |
 | 1 | Ubiquiti Dream Router | Main gateway | 1 Gbps networking, Wi-Fi 6, PoE ports, VLAN support, firewall, VPN options, application-aware controls. |
@@ -45,4 +59,3 @@ This bill of materials captures the device choices from the design and converts 
 | RAID storage | Protects recordings from single-drive failure. |
 | SIEM integration | Improves detection of unauthorized access and outages. |
 | Central dashboard | Simplifies operations across multiple vendor devices. |
-

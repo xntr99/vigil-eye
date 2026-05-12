@@ -1,10 +1,10 @@
-! MeshSight Sentinel - site router example
+! Vigil-Eye - site router example
 ! Replace every placeholder before use.
 
 service password-encryption
 hostname SiteRouter
 no ip domain-lookup
-ip domain-name meshsight.local
+ip domain-name vigil-eye.local
 ip cef
 no ipv6 cef
 

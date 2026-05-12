@@ -20,6 +20,10 @@ The project proposes an IP-camera surveillance network using:
 
 ## Research Inputs
 
+![Community survey chart](../assets/source-figures/community-survey-p087-01.png)
+
+![Community survey chart](../assets/source-figures/community-survey-p088-01.png)
+
 The source material combines several input types:
 
 | Input | How It Shapes The Design |

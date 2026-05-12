@@ -2,6 +2,8 @@
 
 This plan converts the design into an implementation sequence. It is written as a practical blueprint for a real rollout, while still matching the original simulated project scope.
 
+![PPDIOO lifecycle](../assets/source-figures/ppdioo-lifecycle-p045-01.png)
+
 ## Phase 1: Site Survey
 
 - Map roads, intersections, dark areas, community spaces, existing poles, power sources, and mounting constraints.
@@ -11,6 +13,8 @@ This plan converts the design into an implementation sequence. It is written as 
 - Record each proposed device location in an installation sheet.
 
 ## Phase 2: Physical Install
+
+![Physical layout](../assets/source-figures/physical-layout-p096-02.png)
 
 | Component | Placement Guidance |
 | --- | --- |
@@ -26,6 +30,8 @@ This plan converts the design into an implementation sequence. It is written as 
 Use tamper-resistant mounts, weatherproof enclosures, cable strain relief, and labeled cables. Sensitive core devices should sit behind locked physical access controls.
 
 ## Phase 3: Logical Configuration
+
+![Detailed logical layout](../assets/source-figures/logical-layout-p099-01.png)
 
 - Assign static IPs to all infrastructure and camera devices.
 - Create VLANs for cameras, management, core/NVR, and remote interconnect.
@@ -92,3 +98,13 @@ Accept the rollout only after the validation plan passes:
 - Mesh and bridge links remain stable under live camera load.
 - Failover, backup, and recovery procedures are documented.
 - Operators can view live feeds, search playback, and export evidence.
+
+## Device Setup Screenshots
+
+![Dream Router setup reference](../assets/source-figures/setup-dream-router-p158-01.png)
+
+![NanoStation bridge setup reference](../assets/source-figures/setup-nanostation-bridge-p159-01.png)
+
+![PowerBeam bridge setup reference](../assets/source-figures/setup-powerbeam-bridge-p160-01.png)
+
+![NVR setup reference](../assets/source-figures/setup-nvr-p161-01.png)

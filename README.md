@@ -1,8 +1,8 @@
-# MeshSight Sentinel: Resilient Wireless Mesh Surveillance Blueprint
+# Vigil-Eye: Wireless Mesh Surveillance Engineering Dossier
 
 Made by Austin BC
 
-MeshSight Sentinel is a technical network design for a community-scale outdoor surveillance system using IP cameras, wireless mesh nodes, point-to-multipoint wireless bridges, centralized NVR storage, and secured remote access. It converts the original capstone material into a privacy-safe GitHub-ready engineering repository: architecture notes, deployment steps, device selection, network configuration examples, validation criteria, and a sanitized visual appendix.
+Vigil-Eye is a technical network design for a community-scale outdoor surveillance system using IP cameras, wireless mesh nodes, point-to-multipoint wireless bridges, centralized NVR storage, and secured remote access. It converts the original capstone material into a GitHub-ready engineering repository: architecture notes, deployment steps, device selection, network configuration examples, validation criteria, source figures, and implementation tables.
 
 The design focuses on a small, flat community footprint with coverage needs across multiple zones, limited existing CCTV coverage, constrained budget, and a requirement for scalable, reliable monitoring from a local operations center.
 
@@ -17,6 +17,8 @@ The design focuses on a small, flat community footprint with coverage needs acro
 - A future-ready roadmap for SIEM monitoring, vulnerability testing, failover, RAID, and unified dashboards.
 
 ## Core Architecture
+
+![Physical wireless surveillance layout](assets/source-figures/physical-layout-p096-02.png)
 
 The system uses a local operations center as the hub. The main router, NVR, and monitoring workstation sit in the secure indoor core. Wireless bridges extend stable backhaul coverage, while mesh nodes distribute camera connectivity across the target area. IP cameras are placed along high-traffic paths, dark corners, intersections, and community spaces that need monitoring.
 
@@ -52,13 +54,13 @@ The proposed device stack includes:
 | [docs/ip-addressing.md](docs/ip-addressing.md) | Addressing scheme transcribed from the source visual, plus deployment corrections. |
 | [docs/deployment-plan.md](docs/deployment-plan.md) | Physical installation, logical configuration, bandwidth, storage, and rollout steps. |
 | [docs/security-and-compliance.md](docs/security-and-compliance.md) | Network security policy, access model, privacy controls, monitoring, and hardening checklist. |
-| [docs/privacy-sanitization.md](docs/privacy-sanitization.md) | Public-safe sanitization notes and asset policy. |
+| [docs/source-tables.md](docs/source-tables.md) | Key tables rebuilt from the PDF into Markdown. |
 | [docs/bill-of-materials.md](docs/bill-of-materials.md) | Device inventory, specs, compatibility notes, and budget posture. |
 | [docs/validation-plan.md](docs/validation-plan.md) | Test plan for signal, throughput, latency, connectivity, reliability, storage, and security. |
 | [docs/operations-runbook.md](docs/operations-runbook.md) | Day-to-day operations, incident handling, backup, maintenance, and escalation workflows. |
-| [docs/image-gallery.md](docs/image-gallery.md) | Privacy-safe device image gallery. Sensitive source screenshots are excluded. |
+| [docs/image-gallery.md](docs/image-gallery.md) | Source figure gallery organized by project section. |
 | [configs/](configs/) | Example router, switch, VPN, and wireless/camera configuration references. |
-| [assets/device-images/](assets/device-images/) | Public-safe device visuals only. |
+| [assets/source-figures/](assets/source-figures/) | Extracted technical figures, diagrams, screenshots, and product visuals. |
 
 ## Added Engineering Improvements
 
@@ -89,4 +91,4 @@ The network should be managed as critical public-safety infrastructure. Operator
 
 ## Visual Appendix
 
-Privacy-safe device visuals are available in [docs/image-gallery.md](docs/image-gallery.md). Source screenshots that may contain full names, exact places, signatures, reports, CVs, letters, or map details are intentionally excluded from the public repo version.
+Extracted technical figures are available in [docs/image-gallery.md](docs/image-gallery.md), and the Markdown tables rebuilt from the PDF are in [docs/source-tables.md](docs/source-tables.md). Administrative letters, CVs, approval pages, and other clearly personal/non-technical pages are still excluded from the repo-facing version.

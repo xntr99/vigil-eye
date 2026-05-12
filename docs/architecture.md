@@ -1,6 +1,6 @@
 # Architecture
 
-MeshSight Sentinel is designed as an outdoor IP surveillance network with three functional planes: surveillance capture, wireless transport, and secured operations. The design combines mesh nodes for local wireless resilience with point-to-multipoint wireless bridges for stable longer-distance backhaul.
+Vigil-Eye is designed as an outdoor IP surveillance network with three functional planes: surveillance capture, wireless transport, and secured operations. The design combines mesh nodes for local wireless resilience with point-to-multipoint wireless bridges for stable longer-distance backhaul.
 
 ## Design Objectives
 
@@ -10,7 +10,13 @@ MeshSight Sentinel is designed as an outdoor IP surveillance network with three 
 - Make the system scalable enough to add more cameras, nodes, storage, monitoring tools, and remote access controls.
 - Preserve reliable recording and evidence retrieval through centralized NVR storage.
 
+## Conceptual Framework
+
+![Conceptual framework](../assets/source-figures/conceptual-framework-p036-01.png)
+
 ## Logical Topology
+
+![Logical layout overview](../assets/source-figures/logical-layout-p098-01.png)
 
 The local operations center acts as the hub. The indoor core contains the gateway router, NVR, and monitoring PC. Wireless bridges provide backhaul to farther parts of the area, while mesh nodes extend local wireless coverage and provide alternate data paths between camera zones.
 

@@ -1,6 +1,6 @@
 # Operations Runbook
 
-This runbook describes how to operate MeshSight Sentinel after deployment.
+This runbook describes how to operate Vigil-Eye after deployment.
 
 ## Daily Checks
 
@@ -75,4 +75,3 @@ Before the system is accepted, provide:
 - Firmware baseline.
 - Validation results.
 - Maintenance schedule.
-
