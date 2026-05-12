@@ -6,6 +6,23 @@ Vigil-Eye is a technical network design for a community-scale outdoor surveillan
 
 The design focuses on a small, flat community footprint with coverage needs across multiple zones, limited existing CCTV coverage, constrained budget, and a requirement for scalable, reliable monitoring from a local operations center.
 
+## Repository Map
+
+| Path | Purpose |
+| --- | --- |
+| [docs/architecture.md](docs/architecture.md) | Full topology, traffic flow, addressing model, protocols, and design trade-offs. |
+| [docs/source-study-summary.md](docs/source-study-summary.md) | Condensed technical reading of the source PDF and its design findings. |
+| [docs/ip-addressing.md](docs/ip-addressing.md) | Addressing scheme transcribed from the source visual, plus deployment corrections. |
+| [docs/deployment-plan.md](docs/deployment-plan.md) | Physical installation, logical configuration, bandwidth, storage, and rollout steps. |
+| [docs/security-and-compliance.md](docs/security-and-compliance.md) | Network security policy, access model, privacy controls, monitoring, and hardening checklist. |
+| [docs/source-tables.md](docs/source-tables.md) | Key tables rebuilt from the PDF into Markdown. |
+| [docs/bill-of-materials.md](docs/bill-of-materials.md) | Device inventory, specs, compatibility notes, and budget posture. |
+| [docs/validation-plan.md](docs/validation-plan.md) | Test plan for signal, throughput, latency, connectivity, reliability, storage, and security. |
+| [docs/operations-runbook.md](docs/operations-runbook.md) | Day-to-day operations, incident handling, backup, maintenance, and escalation workflows. |
+| [docs/image-gallery.md](docs/image-gallery.md) | Source figure gallery organized by project section. |
+| [configs/](configs/) | Example router, switch, VPN, and wireless/camera configuration references. |
+| [assets/source-figures/](assets/source-figures/) | Extracted technical figures, diagrams, screenshots, and product visuals. |
+
 ## What This Builds
 
 - A wireless mesh surveillance topology with redundant wireless paths.
@@ -44,23 +61,6 @@ The proposed device stack includes:
 | Security | Use WPA2 or stronger wireless security, HTTPS, VPN, MFA, ACLs, VLAN segmentation, firmware updates, and disabled unused services. |
 | Bandwidth | Plan roughly 2 to 4 Mbps per camera for ordinary HD streams, then reserve capacity for spikes and live viewing. |
 | Storage | Centralize recording on the NVR, prefer H.265/H.265+, and add RAID plus external backup for real deployments. |
-
-## Repository Map
-
-| Path | Purpose |
-| --- | --- |
-| [docs/architecture.md](docs/architecture.md) | Full topology, traffic flow, addressing model, protocols, and design trade-offs. |
-| [docs/source-study-summary.md](docs/source-study-summary.md) | Condensed technical reading of the source PDF and its design findings. |
-| [docs/ip-addressing.md](docs/ip-addressing.md) | Addressing scheme transcribed from the source visual, plus deployment corrections. |
-| [docs/deployment-plan.md](docs/deployment-plan.md) | Physical installation, logical configuration, bandwidth, storage, and rollout steps. |
-| [docs/security-and-compliance.md](docs/security-and-compliance.md) | Network security policy, access model, privacy controls, monitoring, and hardening checklist. |
-| [docs/source-tables.md](docs/source-tables.md) | Key tables rebuilt from the PDF into Markdown. |
-| [docs/bill-of-materials.md](docs/bill-of-materials.md) | Device inventory, specs, compatibility notes, and budget posture. |
-| [docs/validation-plan.md](docs/validation-plan.md) | Test plan for signal, throughput, latency, connectivity, reliability, storage, and security. |
-| [docs/operations-runbook.md](docs/operations-runbook.md) | Day-to-day operations, incident handling, backup, maintenance, and escalation workflows. |
-| [docs/image-gallery.md](docs/image-gallery.md) | Source figure gallery organized by project section. |
-| [configs/](configs/) | Example router, switch, VPN, and wireless/camera configuration references. |
-| [assets/source-figures/](assets/source-figures/) | Extracted technical figures, diagrams, screenshots, and product visuals. |
 
 ## Added Engineering Improvements
 
